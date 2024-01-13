@@ -1,0 +1,39 @@
+.row{
+    height: 400px;
+    width: 100%;
+    display: flex;
+    gap: 5px;
+    margin-bottom: 5px;
+}
+.row img{
+    height: 100%;
+    width: 100%;
+}
+.two-photo img{
+    height: calc((100% - 5px)/2);
+}
+.row > div{
+    flex: 1;
+}
+.four-photo{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+}
+
+@media screen and (max-width: 576px) {
+    .row{
+        flex-direction: column;
+        height: auto;
+    }
+    .four-photo{
+        grid-template-columns: 1fr;
+    }
+}
+@media screen and (min-width: 576px) and (max-width: 992px){
+    .row{
+        flex-direction: column;
+        height: auto;
+    
+}
+}
